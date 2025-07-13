@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contact-form">
+      <!-- <a href="#jump-to-top"></a> -->
+      <h1 class="contact-form__heading">Contact Us</h1>
+      <form class="contact-form__form">
+        <div class="contact-form__row">
+          <label
+            class="contact-form__label contact-form__field"
+            for="first-name"
+          >
+            First Name <span class="contact-form__required">*</span>
+            <input
+              class="contact-form__input input__field"
+              id="first-name"
+              type="text"
+              name="first-name"
+            />
+            <small class="error-message"></small>
+          </label>
+          <label
+            class="contact-form__label contact-form__field"
+            for="last-name"
+          >
+            Last Name <span class="contact-form__required">*</span>
+            <input
+              class="contact-form__input input__field"
+              id="last-name"
+              type="text"
+              name="last-name"
+            />
+            <small class="error-message"></small>
+          </label>
+        </div>
+
+        <label class="contact-form__label" for="email">
+          Email <span class="contact-form__required">*</span>
+          <input
+            class="contact-form__input input__field"
+            id="email"
+            type="email"
+            name="email"
+          />
+          <small class="error-message"></small>
+        </label>
+
+        <fieldset class="contact-form__fieldset">
+          <legend class="contact-form__legend">
+            Query Type <span class="contact-form__required">*</span>
+          </legend>
+          <div class="contact-form__row">
+            <label
+              class="contact-form__label radio-field contact-form__radio--border"
+              for="general-enquiry"
+            >
+              <input
+                class="contact-form__radio"
+                id="general-enquiry"
+                type="radio"
+                name="query-type"
+                value="General enquiry"
+              />
+              General Enquiry
+            </label>
+            <label
+              class="contact-form__label radio-field contact-form__field contact-form__radio--border"
+              for="support-request"
+            >
+              <input
+                class="contact-form__radio"
+                id="support-request"
+                type="radio"
+                name="query-type"
+                value="Support request"
+              />
+              Support Request
+            </label>
+          </div>
+          <small class="error-message radio-error-message"></small>
+        </fieldset>
+
+        <label class="contact-form__label textarea__label" for="message">
+          Message <span class="contact-form__required">*</span><br />
+          <textarea
+            class="contact-form__textarea input__field"
+            name="message"
+            id="message"
+          ></textarea>
+          <small class="error-message"></small>
+        </label>
+
+        <label
+          class="contact-form__label contact-form__label--checkbox checkbox-label"
+          for="consent"
+        >
+          <div class="checkbox-wrapper">
+            <input
+              class="contact-form__checkbox"
+              type="checkbox"
+              name="consent"
+              id="consent"
+            />
+            I consent to being contacted by the team
+            <span class="contact-form__required">*</span>
+          </div>
+          <small class="error-message checkbox-error-message"></small>
+        </label>
+
+        <button class="contact-form__button btn" type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal">
+      <h2 class="modal__heading">
+        <img src="./assets/images/icon-success-check.svg" alt="" /> Message
+        Sent!
+      </h2>
+      <p class="modal__description">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>

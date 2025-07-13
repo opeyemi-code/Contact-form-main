@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: hsl(148, 38%, 91%);
+  height: 100vh;
+  position: relative;
+}
+
+/* ===== MODAL STYLES ===== */
+.modal {
+  background-color: hsl(187, 24%, 22%);
+  padding: 16px 24px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  display: none;
+  animation: modalDisplay 1s ease 0s 1 normal forwards;
+}
+
+.modal-display {
+  display: block;
+}
+
+.modal__heading {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal__description {
+  color: hsl(148, 38%, 91%);
+  margin-top: 10px;
+}
+
+@keyframes modalDisplay {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+/* ===== CONTACT FORM LAYOUT ===== */
+.contact-form {
+  background-color: hsl(0, 0%, 100%);
+  margin: 1rem;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.contact-form__form {
+  margin-top: 24px;
+}
+
+.contact-form__heading {
+  color: hsl(187, 24%, 22%);
+}
+
+.contact-form__fieldset {
+  border: none;
+  margin-bottom: 10px;
+}
+
+.contact-form__legend {
+  margin-bottom: 16px;
+  color: hsl(187, 24%, 22%);
+}
+
+/* ===== FORM ELEMENTS ===== */
+/* Labels & Inputs */
+.contact-form__label,
+.contact-form__input,
+.contact-form__textarea {
+  display: block;
+}
+
+.contact-form__label {
+  margin-bottom: 16px;
+  color: hsl(187, 24%, 22%);
+  font-weight: normal;
+}
+
+.contact-form__required {
+  margin-left: 5px;
+  color: hsl(169, 82%, 27%);
+}
+
+/* Text Inputs & Textarea */
+.contact-form__input {
+  color: hsl(187, 24%, 22%);
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 6px;
+}
+
+.contact-form__textarea {
+  color: hsl(187, 24%, 22%);
+  width: 100%;
+  height: 200px;
+  margin-top: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid hsl(186, 15%, 59%);
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border: 1px solid hsl(169, 82%, 27%);
+  color: hsl(169, 82%, 27%);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Radio Buttons */
+.contact-form__radio--border {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 6px;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-form__radio {
+  width: 20px;
+  height: 20px;
+  color: hsl(187, 24%, 22%);
+  accent-color: hsl(169, 82%, 27%);
+}
+
+.contact-form__radio--border:hover {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-form__checkbox {
+  width: 20px;
+  height: 20px;
+  accent-color: hsl(169, 82%, 27%);
+}
+
+.contact-form__checkbox:checked {
+  color: hsl(169, 82%, 27%);
+}
+
+/* Button */
+.contact-form__button {
+  width: 100%;
+  padding: 24px;
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.contact-form__button:hover {
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(148, 38%, 91%);
+}
+
+/* Error Messages */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  display: block;
+}
+
+.error-message-hidden {
+  display: none;
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media (min-width: 468px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-form {
+    min-width: 50vw;
+  }
+
+  .contact-form__row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-form__label {
+    width: 100%;
+  }
+
+  .radio-field {
+    margin-bottom: 0;
+  }
+
+  .contact-form__textarea {
+    height: 100px;
+  }
+}
+
+@media (max-width: 468px) {
+  @keyframes modalDisplay {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 10px;
+      transform: translateX(10%);
+    }
+  }
+}
